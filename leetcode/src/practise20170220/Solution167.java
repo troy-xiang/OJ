@@ -12,16 +12,19 @@ import java.util.Arrays;
  */
 public class Solution167 {
     public int[] twoSum(int[] numbers, int target) {
-        if(numbers.length < 2) {
+        if(numbers == null || numbers.length < 2) {
             return new int[] {};
         }
 
-        int length = numbers.length;
-        for(int i = 0; i < length; i++) {
-            for(int j = i + 1; j < length; j++) {
-                if(numbers[i] + numbers[j] == target) {
-                    return new int[] {i + 1, j + 1};
-                }
+        int left = 0, right = numbers.length - 1;
+        while(left < right) {
+            int sum = numbers[left] + numbers[right];
+            if(sum == target) {
+                return new int[] {left + 1, right + 1};
+            } else if(sum < target) {
+                left++;
+            } else{
+                right--;
             }
         }
         return new int[] {};
