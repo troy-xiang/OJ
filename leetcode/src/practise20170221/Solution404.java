@@ -10,14 +10,13 @@ public class Solution404 {
             return 0;
         }
         int count = 0;
-        int temp = 0;
-        TreeNode left = new TreeNode(0);
-        left = root;
-        while(left.left != null) {
-            left = left.left;
-            temp = left.val;
+        if(root.left != null) {
+            if(root.left.left == null && root.left.right == null) {
+                count += root.left.val;
+            } else {
+                count += sumOfLeftLeaves(root.left);
+            }
         }
-        count += temp;
-        return count + sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right);
+        return count + sumOfLeftLeaves(root.right);
     }
 }
