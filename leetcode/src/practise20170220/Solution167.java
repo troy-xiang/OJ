@@ -1,7 +1,5 @@
 package practise20170220;
 
-import java.util.Arrays;
-
 /**
  * Created by Troy on 2017/2/20.
  * 167. Two Sum II - Input array is sorted
