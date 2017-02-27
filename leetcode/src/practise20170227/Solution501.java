@@ -1,4 +1,6 @@
-package practise20170226;
+package practise20170227;
+
+import practise20170226.TreeNode;
 
 /**
  * Created by troy on 2017/2/26.
@@ -15,6 +17,6 @@ public class Solution501 {
         if (root == null) {
             return new int[] {};
         }
-
+        return null;
     }
 }
